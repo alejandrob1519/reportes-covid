@@ -1,0 +1,38 @@
+<!-- Inicio codigo webapp-->
+<link rel="stylesheet" href="css/style.css" >
+<link rel="shortcut icon" type="image/ico" href="img/favicon.ico"/>
+<link rel="manifest" href="manifest.webmanifest">
+
+<!-- android -->
+<meta name="theme-color" content="#3498db">
+
+<!-- IOS -->
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="apple-touch-icon" href="img/icons/icon-192x192.png">
+<link rel="apple-touch-icon" sizes="152x152" href="img/icons/icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/icons/icon-192x192.png">
+<link rel="apple-touch-icon" sizes="167x167" href="img/icons/icon-152x152.png">
+<link href="img/icons-ios/iphone5_splash.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="img/icons-ios/iphone6_splash.png" media="(device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="img/icons-ios/iphoneplus_splash.png" media="(device-width: 621px) and (device-height: 1104px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+<link href="img/icons-ios/iphonex_splash.png" media="(device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+<link href="img/icons-ios/iphonexr_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="img/icons-ios/iphonexsmax_splash.png" media="(device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3)" rel="apple-touch-startup-image" />
+<link href="img/icons-ios/ipad_splash.png" media="(device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="img/icons-ios/ipadpro1_splash.png" media="(device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="img/icons-ios/ipadpro3_splash.png" media="(device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<link href="img/icons-ios/ipadpro2_splash.png" media="(device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Twittor!!">
+<script> 
+	document.addEventListener("DOMContentLoaded", function(event) {
+		var url = window.location.href,
+		swLocation = '/covid/sw.js'; //este path es para produccion 
+
+		if(navigator.serviceWorker){		
+			if(url.includes('localhost')){ swLocation = '/covid/sw.js'; }
+			navigator.serviceWorker.register(swLocation);  //este path es para desarrollo
+		}		
+	  });
+</script>
+<!-- Fin codigo webapp-->

@@ -1,0 +1,22 @@
+  html, body {
+    /*codigo para Android, 
+    desactivar el (pull to refresh) recarga al jalar para abajo*/
+    overscroll-behavior-y: contain;
+
+    /*codigo para IOS*/
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+}
+
+ul.nav.nav-tabs li>a {
+    font-weight: bold;
+    background: darkcyan;
+    color: #fff;
+}
+
+ul.nav.nav-tabs li.active>a {
+    font-weight: bold;
+    background: #fff;
+    color: #666;
+}
